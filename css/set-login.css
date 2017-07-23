@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  background: #f5f5f5; }
+
+.header {
+  width: 100%;
+  text-align: center;
+  height: 2.05rem;
+  line-height: 2.05rem;
+  display: flex;
+  font-size: 0.85rem;
+  background: #ffac2c; }
+  .header a {
+    display: block;
+    flex: 1;
+    text-align: left;
+    color: white;
+    padding-left: 0.65rem;
+    font-size: 1.2rem;
+    line-height: 2.05rem; }
+  .header span {
+    display: block;
+    line-height: 2.05rem;
+    flex: 1;
+    font-size: 0.85rem;
+    color: white; }
+  .header div {
+    flex: 1; }
+
+.content {
+  width: 100%;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column; }
+  .content .content-top {
+    background: white;
+    width: 100%;
+    padding: 0 0.4rem;
+    display: flex;
+    flex: 1;
+    margin-top: 0.4rem;
+    border-bottom: 1px solid #e8e8e8; }
+    .content .content-top .con-left {
+      padding: 0.65rem 0.4rem 0.55rem 0; }
+      .content .content-top .con-left a {
+        width: 1.8rem;
+        display: block; }
+        .content .content-top .con-left a img {
+          width: 100%;
+          vertical-align: top; }
+    .content .content-top .con-center {
+      flex: 1;
+      padding: 0.5rem 0 0; }
+      .content .content-top .con-center p {
+        font-size: 0.6rem;
+        padding: 0.2rem; }
+      .content .content-top .con-center p:nth-of-type(2) {
+        text-align: center;
+        background: #ffc801;
+        font-size: 0.45rem;
+        border-radius: 5px;
+        color: white; }
+    .content .content-top .con-right {
+      flex: 1;
+      font-size: 0.65rem;
+      padding: 1rem 0.35rem 1rem;
+      text-align: right;
+      color: #ffc801; }
+      .content .content-top .con-right i {
+        padding-left: 0.5rem;
+        color: #dcdcdc;
+        font-size: 1rem; }
+  .content .content-box {
+    width: 100%;
+    background: white;
+    margin-top: 0.8rem; }
+    .content .content-box li {
+      width: 100%;
+      border-bottom: 1px solid #e8e8e8; }
+      .content .content-box li a {
+        display: flex;
+        font-size: 0.65rem;
+        padding: 0.65rem 0.75rem 0.6rem 0.9rem; }
+        .content .content-box li a span {
+          flex: 1;
+          text-align: left; }
+        .content .content-box li a i {
+          flex: 1;
+          text-align: right; }
+  .content .content-login {
+    width: 100%;
+    margin-top: 0.65rem;
+    background: white;
+    padding: 0.65rem 0.75rem 0.6rem 0.9rem;
+    font-size: 0.65rem; }
+    .content .content-login a {
+      display: block;
+      text-align: center; }
+
+/*# sourceMappingURL=set-login.css.map */

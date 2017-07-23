@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--优先使用IE最新版本和Chrome-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chome=1" />
+    <!--视口--设备宽度--初始缩放比例--最小缩放比例--最大缩放比例--用户缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!--禁止浏览器自动的识别-电话号码-email--->
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <!--是否启用Web全屏-->
+    <meta name="apple-mobile-web-app-capable" content='yes' />
+    <meta name="apple-mobile-web-status-bar-style" content="normal|black|black-translucent">
+    <title>系统设置</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/set-login.css">
+</head>
+<script>
+    (function(win,doc){
+        //浏览器缩放时
+        win.onresize=function(){
+            change();
+        };
+        change();
+        function change(){
+            var oFs=doc.documentElement.clientWidth/(320/20);
+
+            //设置根目录字体大小
+            doc.documentElement.style.fontSize=oFs+'px';
+        }
+    })(window,document);
+</script>
+<body>
+<div class="header">
+    <a class="fa fa-angle-left" href="../index.html"></a>
+    <span>系统设置</span>
+    <div></div>
+</div>
+<div class="content">
+    <div class="content-top">
+        <div class="con-left"><a href="#">
+            <img src="../img/set-img.png" alt="">
+        </a></div>
+        <div class="con-center">
+            <p>*haokun</p>
+            <p class="fa fa-user">个人用户</p>
+        </div>
+        <div class="con-right" id="tiao">
+            完善个人资料
+            <i class="fa fa-angle-right"></i>
+        </div>
+    </div>
+    <ul class="content-box">
+        <li><a href="setpasswarld.html"><span>修改登录密码</span><i class="fa fa-angle-right"></i></a></li>
+        <li><a href="set.html"><span>官方微信号</span><i class="fa fa-angle-right"></i></a></li>
+    </ul>
+    <div class="content-login"><a href="../login.html">退出登录</a></div>
+</div>
+</body>
+<script>
+	document.getElementById("tiao").onclick = function(){
+		location.href = "ziliao.html"
+	}
+</script>
+</html>

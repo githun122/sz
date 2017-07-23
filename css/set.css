@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box; }
+
+.header {
+  width: 100%;
+  text-align: center;
+  height: 2.05rem;
+  line-height: 2.05rem;
+  display: flex;
+  font-size: 0.85rem;
+  background: #ffac2c; }
+  .header a {
+    display: block;
+    flex: 1;
+    text-align: left;
+    color: white;
+    padding-left: 0.65rem;
+    font-size: 1.2rem;
+    line-height: 2.05rem; }
+  .header span {
+    display: block;
+    line-height: 2.05rem;
+    flex: 1;
+    font-size: 0.85rem;
+    color: white; }
+  .header div {
+    flex: 1; }
+
+.content {
+  width: 100%; }
+  .content .content-top {
+    width: 100%;
+    background: #f5f5f5;
+    font-size: 0.65rem;
+    padding: 0.65rem 0;
+    color: #a8a8a8;
+    text-align: center; }
+  .content .box {
+    width: 100%;
+    margin-top: 0.2rem;
+    padding: 0 0.6rem; }
+    .content .box .box-top {
+      width: 100%;
+      font-size: 0.65rem;
+      padding: 0.8rem 0; }
+      .content .box .box-top span {
+        font-size: 0.9rem;
+        color: #f83600; }
+    .content .box .box-con {
+      width: 100%;
+      border-radius: 4px;
+      background: #facd89;
+      padding-bottom: 0.65rem; }
+      .content .box .box-con img {
+        margin-top: 0.2rem; }
+      .content .box .box-con p {
+        margin-top: 0.65rem;
+        font-size: 0.65rem;
+        color: #f95222; }
+    .content .box .box-bom {
+      padding-top: 1.8rem; }
+      .content .box .box-bom img {
+        display: block;
+        width: 7.05rem;
+        margin: 0 auto; }
+
+/*# sourceMappingURL=set.css.map */

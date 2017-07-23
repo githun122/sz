@@ -1,0 +1,66 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#wrapper {
+    height: 4rem;
+    flex-grow: 1;
+    overflow: auto;
+}
+header{
+    background: #F85A2C;
+}
+.header-init{
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    line-height:1.875rem;
+    font-size:0.75rem;
+    color: #fff;
+}
+.header-init span a{
+	color: white;
+}
+.top-banner{
+    width: 100%;
+}
+.top-banner img{
+    width: 100%;
+}
+.init-content div{
+    line-height: 2.5rem;
+    border-bottom:1px solid #E6E6E6;
+    text-indent: 1rem;
+}
+.init-top{
+    background-color: #F5F5F5;
+    color: #666;
+}
+.init-in{
+    display: flex;
+    justify-content: space-between;
+}
+.init-in input{
+    border: none;
+    text-align: right;
+    padding-right: 1rem;
+    color: #666;
+}
+.init-top span{
+    color: orange;
+    font-size: 0.45rem;
+}
+.a-button{
+    width: 95%;
+    margin: 1rem auto;
+    background: #FED556;
+    line-height:1.5rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+    border-radius: .5rem;
+}

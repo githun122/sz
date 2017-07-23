@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/lost.css" />
+    <script type="text/javascript">
+    	(function(win,doc){
+		//浏览器缩放时
+		win.onresize=function(){
+			change();	
+		};
+		change();
+		function change(){
+			var oFs=doc.documentElement.clientWidth/(640/20);
+	
+			//设置根目录字体大小
+			doc.documentElement.style.fontSize=oFs+'px';	
+		}	
+	})(window,document);
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+   		
+    </script>
+	</head>
+	<body>
+		<header>
+			<span><a href="../login.html" class="glyphicon glyphicon-menu-left"></a></span>
+			<span>忘记密码</span>
+			<span>&nbsp;</span>
+		</header>
+		<div id="box1">
+			<p>请输入您绑定的手机号码</p>
+			<p>
+				<img src="../img/li-hpho.jpg"/>
+				<input type="number" id="tel" placeholder="手机号码"/>
+				<img src="../img/lj-xx.jpg"/>
+			</p>
+			<p id="next"><a href="javascript:;">下一步</a></p>
+		</div>
+		<div id="box2">
+			<p>请输入您收到的验证码</p>
+			<p>
+				<img src="../img/xin.jpg"/>
+				<input type="text" id="check" placeholder="验证码"/>
+				<span id="djh">60</span>
+			</p>
+			<p id="last"><a href="javascript:;">下一步</a></p>
+		</div>
+		<div id="box3">
+			<p>重置您的登录密码</p>
+			<p>
+				<img src="../img/lj-hsuo.jpg"/>
+				<input type="password" id="pass" placeholder="请输入6-24位的登录密码"/>
+				<img src="../img/li-eye.jpg" id="eye"/>
+			</p>
+			<p id="lost"><a href="javascript:;">确定</a></p>
+		</div>
+		<div id="lod">
+			<div id="box1-1">
+				<div>
+					<p>确认手机号码</p>
+					<p>我们将发送验证码到：</p>
+					<p id="tell">&nbsp;</p>
+				</div>
+				<div>
+					<a href="javascript:;" id="no">取消</a>
+					<a href="javascript:;" id="yes">确定</a>
+				</div>
+			</div>
+			<div id="box3-1">
+				<div>
+					<p>&nbsp;</p>
+					<p>重置密码成功，请重新登录！</p>
+					<p>&nbsp;</p>
+				</div>
+				<div>
+					<a href="javascript:;" id="ok">确定</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery.min.js" ></script>
+	<script type="text/javascript">
+		$("#next").click(function(){
+			if($("#tel").val()==''){
+				$("#tell").html("&nbsp;")
+				alert("请输入手机号")
+			}else{
+				$("#tell").html($("#tel").val());
+				$("#lod").css("display","block");
+				$("#box3-1").css("display","none");
+			}
+		})
+		$("#no").click(function(){
+			$("#tell").html("&nbsp;");
+			$("#lod").css("display","none");
+		})
+		$("#yes").click(function(){
+			$("#lod").css("display","none");
+			$("#box1").css("display","none");
+			$("#box2").css("display","block");
+			var t = 60;
+			var timer = setInterval(function(){
+				t--;
+				$("#djh").html(t+"s");
+				if(t==0){
+					clearInterval(timer)
+					$("#djh").html("0");
+				}
+			},1000)
+		})
+		$("#last").click(function(){
+			if($("#check").val()==''){
+				alert("请输入验证码")
+			}else{
+				$("#box3").css("display","block");
+				$("#box2").css("display","none")
+			}
+		})
+		var s = 0;
+		$("#eye").click(function(){
+			if(s==0){
+				$("#pass").attr("type","text");
+				s++;
+			}else{
+				$("#pass").attr("type","password");
+				s=0;
+			}
+		})
+		$("#lost").click(function(){
+			if($("#pass").val()==''){
+				alert("请设置新密码")
+			}else{
+				$("#lod").css("display","block");
+				$("#box1-1").css("display","none");
+				$("#box3-1").css("display","block");
+			}
+		})
+		$("#ok").click(function(){
+			location.href="../index.html"
+		})
+	</script>
+</html>

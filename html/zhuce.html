@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script src="../js/angular.js"></script>
+		<script src="../js/angular-route.js"></script>
+		<title></title>
+		<link rel="stylesheet" href="../css/zhuce.css" />
+	</head>
+	<body ng-controller="myCtrl">
+		<header>
+			<img src="../img/hong.png"/>
+			<h4 class="header_top">
+			 <div><a href="../index.html"><span class="glyphicon glyphicon-menu-left"></span></a></div>
+			 <div id="btn">
+			 	<!--<a href="JavaScript:;">-->
+			 	账户信息
+			 	<span class="caret"></span>
+			    <!--</a>-->
+			 </div>
+			 <div></div>
+			</h1>
+			<div class="header_count">
+				<div>
+					<p>今日注册量</p>
+					<p><strong>185</strong>(人)</p>
+					<p>APP:120人&emsp;H5/web:38人</p>
+				</div>
+			</div>
+			<div class="tuming">
+				
+			
+				<div class="xiala">
+					<div class="one"><a href="JavaScript:;">全部</a></div>
+					<div class="xian">
+						<span></span>
+						应用场景
+						<span></span>
+					</div>
+					<div class="btn">
+						<div><a href="JavaScript:;">APP</a></div>&emsp;
+						<div><a href="JavaScript:;">H5/web</a></div>
+					</div>
+					<div class="xian">
+						<span></span>
+						注册方式
+						<span></span>
+					</div>
+					<div class="btn">
+						<div><a href="JavaScript:;">闪注</a></div>&emsp;
+						<div><a href="JavaScript:;">短信</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="qiehuan">
+				<ul>
+					<li class="lis"><a href="#yi">今日注册量</a></li>
+					<li><a href="#er">一周注册量</a></li>
+					<li><a href="#san">一个月注册量</a></li>
+				</ul>
+			</div>
+		</header>
+		<div ng-view=""></div>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			(function(win,doc){
+		        win.onresize = function(){change()}
+		        function change(){
+		        var wt = document.documentElement.clientWidth/((640/20)/2);
+		        //根目录字体大小
+		       doc.documentElement.style.fontSize=wt+"px";
+		
+		  }
+		  change();
+
+         })(window,document);
+         $(function(){
+         	$("#btn").click(function(){
+         		$(".tuming").slideToggle(500)
+         	})
+         	
+         });
+         //----------------------------------------
+         var app=angular.module("myApp",["ngRoute"]);
+			app.controller("myCtrl",function($scope,$http){//通过$http获取josn文件
+//                      $http.get("http:localhost:6688/../data/data.json").success(function(data){
+//			    		$scope.users = data;
+			    	//})
+			});
+			app.config(function($routeProvider){//切换
+				$routeProvider
+				.when('/yi',{
+					templateUrl:"../count/one.html"//主页面
+				})
+				.when('/er',{
+					templateUrl:"../count/two.html"//测试页面
+				})
+				.when('/san',{
+					templateUrl:"../count/three.html"//测试页面
+				})
+				.otherwise({
+					redirectTo:"/yi"//默认显示主页页面
+				})
+			})		
+			
+            $(".qiehuan ul li").click(function(){//点击切换样式
+				var i=$(this).index();
+				$(".qiehuan ul li:eq("+i+")").addClass("lis").siblings().removeClass("lis");
+			});
+		</script>
+	</body>
+</html>

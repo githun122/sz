@@ -1,0 +1,90 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#one {
+  width: 100%;
+}
+#one header {
+  width: 100%;
+  position: relative;
+}
+#one header > img {
+  width: 100%;
+}
+#one header > span {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+}
+#one header > span a {
+  text-decoration: none;
+  font-family: "微软雅黑";
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+#one article {
+  width: 100%;
+}
+#one article section:nth-child(1) {
+  margin-top: 4.5rem;
+}
+#one article section:nth-child(1), #one article section:nth-child(2) {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#one article section:nth-child(1) > div:nth-child(1), #one article section:nth-child(2) > div:nth-child(1) {
+  margin-left: 1.4rem;
+  padding: 1.5rem 0;
+  margin-right: 0.8rem;
+}
+#one article section:nth-child(1) > div:nth-child(1) img, #one article section:nth-child(2) > div:nth-child(1) img {
+  width: 1.4rem;
+}
+#one article section:nth-child(1) > div:nth-child(2) input, #one article section:nth-child(2) > div:nth-child(2) input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "微软雅黑";
+  font-size: 1.2rem;
+}
+#one article section:nth-child(2) {
+  border-top: solid 0.05rem #F0F0F0;
+  border-bottom: solid 0.05rem #F0F0F0;
+}
+#one article section:nth-child(3) {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+#one article section:nth-child(3) a {
+  display: inline-block;
+  width: 90%;
+  background: #FFD974;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "微软雅黑";
+  font-size: 1.5rem;
+  color: whitesmoke;
+  padding: 1rem 0;
+  outline: none;
+}
+#one article section:nth-child(4) {
+  width: 100%;
+  margin-top: 14.625rem;
+  text-align: center;
+}
+#one article section:nth-child(4) a {
+  display: block;
+  text-decoration: none;
+  font-family: "微软雅黑";
+  font-size: 1.3rem;
+  color: #0B0C0E;
+  margin-right: 2rem;
+}
+
+/*# sourceMappingURL=css.css.map */

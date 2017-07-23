@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box; }
+
+.header {
+  width: 100%; }
+  .header p {
+    width: 100%;
+    height: 1.35rem;
+    background: linear-gradient(#ef7e0c, #f69304);
+    text-align: right; }
+    .header p a {
+      display: block;
+      color: white;
+      padding-right: 0.6rem;
+      font-size: 0.65rem;
+      line-height: 1.35rem; }
+  .header img {
+    width: 100%;
+    vertical-align: top; }
+
+.content {
+  width: 100%;
+  padding: 2.125rem 0.65rem  0; }
+  .content form {
+    width: 100%; }
+    .content form ul {
+      width: 100%; }
+      .content form ul li {
+        width: 100%;
+        height: 2.25rem;
+        border-bottom: 1px solid #e4e4e4;
+        line-height: 2.25rem;
+        font-size: 0.8rem;
+        color: #e4e4e4; }
+        .content form ul li input {
+          color: #bab8bc;
+          padding-left: 0.35rem;
+          line-height: 2.25rem; }
+      .content form ul li:last-child {
+        margin-top: 1.5rem;
+        padding: 0 0.45rem;
+        width: 100%;
+        border: none;
+        height: 2.2rem;
+        line-height: 2.2rem;
+        font-size: 0.75rem;
+        border-radius: 2.2rem;
+        background: #ffd974; }
+        .content form ul li:last-child a {
+          display: block;
+          text-align: center;
+          color: white;
+          line-height: 2.2rem; }
+
+.footer {
+  width: 100%;
+  margin-top: 7.625rem;
+  padding-bottom: 0.65rem; }
+  .footer a {
+    display: block;
+    text-align: center; }
+
+/*# sourceMappingURL=login.css.map */

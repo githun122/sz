@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<header class="header">
+	    <span><a href="application.html"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></span>
+	    <span>应用信息</span>
+	    <span><a href="application2.html">新增应用</a></span>
+	</header>
+	<section>
+		<div id="wrapper">
+	            <div class="init-one">
+	                <div class="incon-i"><img src="../img/k-logo.png" alt=""></div>
+	                <div class="in-content">
+	                  <h2 class="incon-h">
+	                      开心消消乐
+	                      <span class="incon-s">
+	                          【签 名 ：消消乐】
+	                      </span>
+	                  </h2>
+	                    <p>应用场景App、H5/Web</p>
+	                </div>
+	            </div>
+	        <div class="intn"></div>
+	        <div class="init-oBo">
+	            <div class="obo-init">
+	                <p><span class="obo-sp">应用名称</span> ： 开心消消乐</p>
+	                <p><span class="obo-sp">通信密钥</span> ： xxxxxxxxxx</p>
+	                <p><span class="obo-sp">有效时间</span> ： 2016/7/1-2017/7/1</p>
+	                <p class="obo-or"><span>应用场景</span> ： 应用场景APP、H5/Web</p>
+	                <p class="list-p"><span>闪注注册量 ：151（人）</span> <span>短信注册量 ： 89（人）</span></p>
+	            </div>
+	        </div>
+	
+	        <div class="init-two">
+	            <div class="incon-i"><img src="../img/k-logos.png" alt=""></div>
+	            <div class="in-content">
+	                <h2 class="incon-h">大话西游<span class="incon-s">【签 名 ：大话西游】</span></h2>
+	                <p>应用场景App、H5/Web</p>
+	            </div>
+	        </div>
+	        <div class="intn1"></div>
+	        <div class="init-two">
+	            <div class="incon-i"><img src="../img/k-logot.png" alt=""></div>
+	            <div class="in-content">
+	                <h2 class="incon-h">
+	                    大话西游
+	                      <span class="incon-s">
+	                          【签 名 ：大话西游】
+	                      </span>
+	                </h2>
+	                <p>应用场景App、H5/Web</p>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+<footer>
+
+</footer>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script>
+    (function (win, doc) {
+        win.onresize = function () {
+            change();
+        };
+        change();
+        function change() {
+            var oFs = doc.documentElement.clientWidth / (320 / 20);
+            doc.documentElement.style.fontSize = oFs + 'px';
+        }
+    })(window, document);
+  var n = 0;
+
+    $(".init-one").click(function () {
+        if(n == 0){
+            $(".init-oBo").css("height","12rem").css("display","block");
+            $(".intn").css("display","none");
+            n++
+        }else if(n != 0){
+            $(".init-oBo").css("height","0").css("display","none");
+            $(".intn").css("display","block");
+            n=0
+        }
+    })
+
+</script>
+</body>
+</html>

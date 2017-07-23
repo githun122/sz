@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/pass.css" />
+    <script type="text/javascript">
+    	(function(win,doc){
+		//浏览器缩放时
+		win.onresize=function(){
+			change();	
+		};
+		change();
+		function change(){
+			var oFs=doc.documentElement.clientWidth/(320/20);
+	
+			//设置根目录字体大小
+			doc.documentElement.style.fontSize=oFs+'px';	
+		}	
+	})(window,document);
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+</head>
+<body>
+	<header>
+		<a href="set-login.html"><span class="glyphicon glyphicon-menu-left"></span></a>
+		<span id="title">登录密码验证</span>
+		<span>&nbsp;</span>
+	</header>
+	<article id="box1">
+		<section>
+			<span>请输入原登录密码验证身份</span>
+		</section>
+		<section>
+			<div><img src="../img/lj-suo.jpg"/></div>
+			<div><input type="password" id="pass" value="" placeholder="输入原登录密码"/></div>
+			<div><img src="../img/li-eye.jpg" id="eye"/></div>
+		</section>
+		<section>
+			<a href="javascript:;" id="ok">确定</a>
+		</section>
+	</article>
+	<article id="box2">
+		<section>
+			<span>请任意一种方式进行密码修改</span>
+		</section>
+		<section>
+			<p id="one"><a href="#">通过原登录密码验证</a><span class="glyphicon glyphicon-menu-right"></span></p>
+			<p id="two"><a href="#">通过手机号进行验证</a><span class="glyphicon glyphicon-menu-right"></span></p>
+		</section>
+	</article>
+	<article id="box3">
+		<section>
+			<span>请输入原登录密码验证身份</span>
+		</section>
+		<section>
+			<div><img src="../img/lj-suo.jpg"/></div>
+			<div><input type="password" id="pass2" value="" placeholder="输入原登录密码"/></div>
+			<div></div>
+		</section>
+		<section>
+			<a href="javascript:;" id="yes">确定</a>
+		</section>
+	</article>
+	<article id="box4">
+		<section>
+			<span>请输入长度6-24位的新密码</span>
+		</section>
+		<section>
+			<div><img src="../img/lj-suo.jpg"/></div>
+			<div><input type="password" id="newpass" value="" placeholder="输入新登录密码"/></div>
+			<div><img src="../img/li-eye.jpg" id="eye2"/></div>
+		</section>
+		<section>
+			<a href="javascript:;" id="go">确定</a>
+		</section>
+	</article>
+	<article id="box5">
+		<section>
+			<p>验证短信已发送到手机号：</p>
+			<p>182****2254</p>
+		</section>
+		<section>
+			<div><img src="../img/lj-suo.jpg"/></div>
+			<div><input type="text" value="" placeholder="输入手机验证码"/></div>
+			<div id="ma">发送验证码</div>
+		</section>
+		<section>
+			<a href="javascript:;" id="next">确定</a>
+		</section>
+	</article>
+	<div id="big">
+		<div id="tep1">登录密码设置成功</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript">
+	var s = 0;
+		$("#eye").click(function(){
+			if(s==0){
+				$("#pass").attr("type","text");
+				s++;
+			}else{
+				$("#pass").attr("type","password");
+				s=0;
+			}
+		})
+		$("#eye2").click(function(){
+			if(s==0){
+				$("#newpass").attr("type","text");
+				s++;
+			}else{
+				$("#newpass").attr("type","password");
+				s=0;
+			}
+		})
+		$("#ok").click(function(){
+			if($("#pass").val()==''){
+				alert("请输入密码")
+			}else{
+				$("#box2").css("display","block").siblings("article").css("display","none");
+				$("#title").html("密码验证");
+			}
+		})
+		$("#one").click(function(){
+			$("#box3").css("display","block").siblings("article").css("display","none");
+			$("#title").html("修改登录密码");
+		})
+		$("#yes").click(function(){
+			if($("#pass2").val()==''){
+				alert("请输入密码")
+			}else{
+				$("#box4").css("display","block").siblings("article").css("display","none");
+				$("#title").html("修改登录密码");
+			}
+		})
+		$("#go").click(function(){
+			if($("#newpass").val()==''){
+				alert("请输入密码")
+			}else{
+				$("#big").css("display","block");
+				$("#title").html("修改登录密码");
+				setTimeout(function(){
+					location.href = "set-login.html"
+				},1000)
+			}
+		})
+		$("#two").click(function(){
+			$("#box5").css("display","block").siblings("article").css("display","none");
+			$("#title").html("手机验证");
+		})
+		$("#ma").click(function(){
+			clearInterval(timer)
+			var i = 60;
+			var timer = setInterval(function(){
+				i--;
+				$("#ma").html(i+"s");
+				if(i==0){
+					$("#ma").html("重新获取");
+					clearInterval(timer);
+				}
+			},1000)
+		})
+		$("#next").click(function(){
+			$("#box4").css("display","block").siblings("article").css("display","none");
+		})
+		$(".glyphicon glyphicon-menu-left").click(function(){
+			location.href = "set.html"
+		})
+</script>
+</html>

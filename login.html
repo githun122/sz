@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/css.css" />
+    <script type="text/javascript">
+    	(function(win,doc){
+		//浏览器缩放时
+		win.onresize=function(){
+			change();	
+		};
+		change();
+		function change(){
+			var oFs=doc.documentElement.clientWidth/(640/20);
+	
+			//设置根目录字体大小
+			doc.documentElement.style.fontSize=oFs+'px';	
+		}	
+	})(window,document);
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+   		
+    </script>
+</head>
+<body id="one">
+	<header>
+		<img src="img/lj-top.jpg"/>
+		<span><a href="javascript:;">注册</a></span>
+	</header>
+	<article>
+		<section>
+			<div><img src="img/li-pho.jpg"/></div>
+			<div><input type="text" id="name" value="" placeholder="用户名/手机号码"/></div>
+		</section>
+		<section>
+			<div><img src="img/lj-suo.jpg"/></div>
+			<div><input type="password" id="pass" value="" placeholder="密码"/></div>
+		</section>
+		<section id="on">
+			<a href="javascript:;">登录</a>
+		</section>
+		<section id="lost">
+			<a href="html/lost.html">忘记密码</a>
+		</section>
+	</article>
+</body>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript">
+	$(function(){
+		$("#pass").click(function(){
+			$("#lost").css("display","block");
+		})
+	})
+	var s = 0;
+	var i = 0;
+	$("#name").change(function(){
+		s++;
+	})
+	$("#pass").change(function(){
+		i++;
+	})
+	$("#on").click(function(){
+		if(s>0&&i>0){
+			location.href="index.html"
+			//location.href = ""
+		}else if(s>0&&i==0){
+			alert("还未输入密码")
+		}
+	})
+</script>
+</html>

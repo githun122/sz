@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<title></title>
+		<link rel="stylesheet" href="../css/zhanghuxinxi.css" />
+	</head>
+	<body>
+		<header>
+			<img src="../img/tou.png" alt="" />
+			<h4 class="header_top">
+			 <div><a href="../index.html"><span class="glyphicon glyphicon-menu-left"></span></a></div>
+			 <div id="btn">
+			 	<a href="JavaScript:;">
+			 	账户信息
+			 	<span class="caret"></span>
+			    </a>
+			 </div>
+			 <div></div>
+			</h1>
+			<div class="header_count">
+				<div>
+					<h4><p>闪注账户</p></h4>
+					<p>剩余量：<strong>95000</strong>条</p>
+				</div>
+				<div>
+					<h4><p>短信账户</p></h4>
+					<p>剩余量：<strong>865</strong>条</p>
+				</div>
+			</div>
+			<div class="tuming">
+				
+			
+				<div class="xiala">
+					<div class="one"><a href="JavaScript:;">全部账户</a></div>
+					<div class="xian">
+						<span></span>
+						应用
+						<span></span>
+					</div>
+					<div class="btn">
+						<div><a href="dateils.html">天天消消乐</a></div>
+						<div><a href="JavaScript:;">大话西游</a></div>
+						<div><a href="JavaScript:;">王者荣耀</a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="chongzhi">
+				<div class="topTo">
+					<div><h5><a href="chongzhi.html"><img src="../img/yuan.png"/> 我的充值</a></h5></div>
+					<div><h5>
+						<a href="JavaScript:;">查看明细</a>
+						<span class="glyphicon glyphicon-menu-right"></span>
+					</h5></div>
+				</div>
+				<div class="header_count se">
+					<div>
+						<h5><p>闪注充值量</p></h5>
+						<p class="a"><strong>20000</strong>条</p>
+					</div>
+					<div>
+						<h5><p>短信账户</p></h5>
+						<p class="a"><strong>5000</strong>条</p>
+					</div>
+			    </div>
+		</div>
+		<div class="chongzhi">
+				<div class="topTo">
+					<div><h5><a href="xiaofei.html"><img src="../img/xiaofei.png"/> 我的消费</a></h5></div>
+					<div><h5>
+						<a href="JavaScript:;">查看明细</a>
+						<span class="glyphicon glyphicon-menu-right"></span>
+					</h5></div>
+				</div>
+				<div class="header_count se">
+					<div>
+						<h5><p>闪注消费量</p></h5>
+						<p class="a"><strong>16825</strong>条</p>
+					</div>
+					<div>
+						<h5><p>短信消费量</p></h5>
+						<p class="a"><strong>1548</strong>条</p>
+					</div>
+			    </div>
+		</div>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			(function(win,doc){
+		        win.onresize = function(){change()}
+		        function change(){
+		        var wt = document.documentElement.clientWidth/((640/20)/2);
+		        //根目录字体大小
+		       doc.documentElement.style.fontSize=wt+"px";
+		
+		  }
+		  change();
+
+         })(window,document);
+         $(function(){
+         	$("#btn").click(function(){
+         		$(".tuming").slideToggle(500)
+         	})
+         	
+         })
+		</script>
+	</body>
+</html>
